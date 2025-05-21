@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+.calculator {
+    background-color: #2c2c2c;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.display {
+    width: 100%;
+    height: 60px;
+    font-size: 2.5em;
+    text-align: right;
+    border: 1px solid #555;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5em;
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+button:active {
+    background-color: #555;
+}
+
+button.operator {
+    background-color: #f8a400;
+    color: #fff;
+}
+
+button.operator:active {
+    background-color: #e57d00;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .display {
+        font-size: 2em; /* Smaller font size for display */
+        height: 50px;
+    }
+
+    button {
+        font-size: 1.3em; /* Smaller font size for buttons */
+        padding: 15px;
+    }
+}
+
+/* Very small screens (phones in portrait mode) */
+@media (max-width: 400px) {
+    .calculator {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .display {
+        font-size: 1.8em;
+        height: 45px;
+    }
+
+    button {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+}
